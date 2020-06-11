@@ -24,8 +24,8 @@
             <input
               type="text"
               id="todo-search"
+              placeholder="Search tasks..."
               class="form-control"
-              autofocus
             />
           </div>
         </div>
@@ -40,19 +40,22 @@
             type="text"
             id="todo-input"
             class="form-control col-md-6 mr-2"
+            placeholder="Get started..."
             autofocus
           />
           <input type="submit" class="btn btn-dark" value="Add Task" />
         </form>
       </div>
     </div>
-    <div class="card card-body bg-light mt-2 col-md-5.3 container">
+    <div class="card card-body bg-light mt-2 container" class="tasks">
       <h3>My Tasks</h3>
       <ul id="todo-items" class="list-group"></ul>
     </div>
 
     <footer class="font-small text-muted">
-      <p class="text-center">Coded by: <a href="https://github.com/CharlesIvia">Charles Ivia</a></p>
+      <p class="text-center">
+        Coded by: <a href="https://github.com/CharlesIvia">Charles Ivia</a>
+      </p>
     </footer>
     <script src="script.js"></script>
   </body>
