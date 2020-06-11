@@ -61,3 +61,18 @@ function addTodo(e) {
     todoForm.reset();
   }
 }
+
+//Search logic
+
+function searchItem() {
+  let searchInput = todoSearch.value.toUpperCase();
+  let items = todoItems.getElementsByTagName("li");
+  for (let i = 0; 0 < items.length; i++) {
+    let val = items[i].textContent.toUpperCase();
+    if (val.indexOf(searchInput) != -1) {
+      items[i].style.display = "block";
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+}
