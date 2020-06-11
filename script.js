@@ -58,7 +58,7 @@ function addTodo(e) {
     //append todo item to local storage
 
     addToLocalStorage(todo);
-    todoForm.reset();
+    checkLocalStorage();
   }
 }
 
