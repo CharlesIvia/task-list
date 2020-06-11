@@ -21,11 +21,35 @@
             <h1>Task List</h1>
           </div>
           <div class="col-md-6 col-lg-4 align-self-center">
-            <input type="text" id="todo-search" class="form-control" autofocus />
+            <input
+              type="text"
+              id="todo-search"
+              class="form-control"
+              autofocus
+            />
           </div>
         </div>
       </div>
     </header>
+
+    <div class="container">
+      <div class="card card-body bg-light">
+        <h3>Add tasks here!</h3>
+        <form id="todo-form" class="form-inline mb-2">
+          <input
+            type="text"
+            id="todo-input"
+            class="form-control col-md-6 mr-2"
+            autofocus
+          />
+          <input type="submit" class="btn btn-dark" value="Add Task" />
+        </form>
+      </div>
+    </div>
+    <div class="card card-body bg-light mt-2 col-md-5.3 container">
+      <h3>My Tasks</h3>
+      <ul id="todo-items" class="list-group"></ul>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
