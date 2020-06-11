@@ -10,3 +10,19 @@ body {
     width: 30%;
   }
 }
+
+@media (max-width: 1000px) {
+  input[type="submit"] {
+    margin-top: 1em;
+    width: 30%;
+  }
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+#todo-items {
+  max-height: 47vh;
+  overflow-y: scroll;
+}
