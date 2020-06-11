@@ -137,3 +137,14 @@ function loadItems() {
     }
   });
 }
+
+//Check local storage
+
+function checkLocalStorage() {
+  let arr = getFromLocalStorage();
+  if (arr.length != 0) {
+    todoItems.parentElement.style.display = "block";
+  } else {
+    todoItems.parentElement.style.display = "none";
+  }
+}
