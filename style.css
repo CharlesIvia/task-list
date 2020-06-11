@@ -4,3 +4,9 @@ body {
   font-family: "Karla", sans-serif;
 }
 
+@media (max-width: 576px) {
+  input[type="submit"] {
+    margin-top: 1em;
+    width: 30%;
+  }
+}
