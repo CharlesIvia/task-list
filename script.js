@@ -111,3 +111,29 @@ function removeFromLocalStorage(todo) {
     checkLocalStorage();
   });
 }
+
+///Load items from local storage
+
+function loadItems() {
+  todoInput.focus();
+  let items = getFromLocalStorage();
+  checkLocalStorage();
+  items.forEach((item) => {
+    if (item != "") {
+      //create li
+
+      let li = document.createElement("li");
+      li.className = "list-group-item";
+      li.textContent = item;
+
+      //Create "X" close btn
+
+      let btn = document.createElement("button");
+      btn.className = "btn btn-dark btn-sm float-right";
+      btn.textContent = "X";
+
+      li.appendChild(btn);
+      todoItems.appendChild(li);
+    }
+  });
+}
