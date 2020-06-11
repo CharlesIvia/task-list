@@ -97,3 +97,17 @@ function getFromLocalStorage() {
 
   return items;
 }
+
+//Remove items from local storage
+
+function removeFromLocalStorage(todo) {
+  let liValue = todo.firstChild.textContent;
+  let storageArray = getFromLocalStorage();
+  storageArray.forEach((item, index) => {
+    if (item === liValue) {
+      storageArray.splice(index, 1);
+      localStorage.setItem("todo", JSON.stringify(storageArray));
+    }
+    checkLocalStorage();
+  });
+}
