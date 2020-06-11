@@ -22,3 +22,35 @@ function removeItem(e) {
     }
 }
 
+//Add todo item
+
+function addTodo(e) {
+    e.preventDefault();
+
+    let todo = todoInput.value;
+
+    if (todo != "") {
+        //Create a list item
+
+        let li = document.createElement("li");
+        li.className = "list-group-item"
+        li.textContent = todo
+
+        //Create close(X) button and append it to "li"
+
+        let xBtn = document.createElement("button")
+        xBtn.className = "btn btn-dark btn-sm float-right"
+        xBtn.textContent = "X"
+        li.appendChild(xBtn)
+
+        //Append todo  item to list
+
+        todoItems.appendChild(li)
+        todoForm.reset()
+
+        //append todo item to local storage
+
+        addToLocalStorage(todo);
+        todoForm.reset();
+    }
+}
