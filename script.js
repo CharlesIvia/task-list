@@ -89,7 +89,7 @@ function addToLocalStorage(todo) {
 
 function getFromLocalStorage() {
   let items = localStorage.getItem("todo");
-  if (item === null) {
+  if (items === null) {
     items = [];
   } else {
     items = JSON.parse(items);
