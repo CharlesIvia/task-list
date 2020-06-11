@@ -26,3 +26,9 @@ h3 {
   max-height: 47vh;
   overflow-y: scroll;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
