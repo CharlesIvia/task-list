@@ -80,8 +80,20 @@ function searchItem() {
 //Add to Local storage
 
 function addToLocalStorage(todo) {
-  let storageItems = getFromStorageItems();
+  let storageItems = getFromLocalStorage();
   storageItems.push(todo);
   localStorage.setItem("todo", JSON.stringify(storageItems));
 }
 
+//Fetch from local storage
+
+function getFromLocalStorage() {
+  let items = localStorage.getItem("todo");
+  if (item === null) {
+    items = [];
+  } else {
+    items = JSON.parse(items);
+  }
+
+  return items;
+}
