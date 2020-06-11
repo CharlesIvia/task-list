@@ -76,3 +76,12 @@ function searchItem() {
     }
   }
 }
+
+//Add to Local storage
+
+function addToLocalStorage(todo) {
+  let storageItems = getFromStorageItems();
+  storageItems.push(todo);
+  localStorage.setItem("todo", JSON.stringify(storageItems));
+}
+
